@@ -53,10 +53,10 @@ const navLinks = [
 const teamMembers = [
   {
     name: "Dr. Ashok Kumar Srivastava",
-    degree: "BDS, MDS",
+    degree: "",
     designation: "Founder & Senior Dental Surgeon",
     specialization: "Implants & Oral Surgery",
-    bio: "With 15+ years of clinical experience, Dr. Ashok Kumar Srivastava leads Dentocare Centre with a commitment to excellence and patient-first care. An expert in complex implant placements and oral surgical procedures.",
+    bio: "Dr. Ashok Kumar Srivastava is the founder of Dentocare Centre with over 40 years of clinical experience in dentistry. His decades of practice have made him one of the most trusted names in dental care in Rishikesh. Patients feel exceptionally comfortable under his care -- his gentle approach, reassuring manner, and calm presence ease even the most anxious patients. Whether it is a routine check-up or a complex procedure, Dr. Ashok ensures every patient feels safe, relaxed, and well looked after throughout their treatment.",
     image: null,
     initials: "AKS",
   },
@@ -729,11 +729,13 @@ export default function LandingPage() {
 
                 {/* Info */}
                 <div className="p-6">
-                  <div className="mb-1">
-                    <Badge className="bg-primary/10 text-primary border-0 text-xs font-medium">
-                      {doctor.degree}
-                    </Badge>
-                  </div>
+                  {doctor.degree && (
+                    <div className="mb-1">
+                      <Badge className="bg-primary/10 text-primary border-0 text-xs font-medium">
+                        {doctor.degree}
+                      </Badge>
+                    </div>
+                  )}
                   <h3 className="font-display font-bold text-xl text-foreground mt-2 mb-0.5">
                     {doctor.name}
                   </h3>
